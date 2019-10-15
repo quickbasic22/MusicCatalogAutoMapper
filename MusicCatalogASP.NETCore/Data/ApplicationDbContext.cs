@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MusicCatalogASP.NETCore.Models;
 
 namespace MusicCatalogASP.NETCore.Data
 {
@@ -12,5 +13,7 @@ namespace MusicCatalogASP.NETCore.Data
             : base(options)
         {
         }
+        public DbSet<Artist> Artists { get; set; }
+        public DbSet<Song> Songs { get; set; }
     }
 }
